@@ -29,9 +29,10 @@ beforeEach(async () => {
 });
 
 afterAll(async () => {
+  await mongo.stop();
   await mongoose.connection.close();
   await mongoose.disconnect();
-  await mongo.stop();
+  //await new Promise((resolve) => setTimeout(() => resolve, 60000));
 });
 
 global.signup = async () => {
