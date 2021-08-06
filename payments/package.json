@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --no-cache",
+    "test:ci": "jest --forceExit --detectOpenHandles",
     "start": "ts-node-dev --poll src/index.ts",
     "startauto": "ts-node-dev src/index.ts"
   },
