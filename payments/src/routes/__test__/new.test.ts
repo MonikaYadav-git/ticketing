@@ -73,9 +73,9 @@ it('successfull payment', async () => {
     .expect(201);
 
   const charges = await stripe.charges.list({ limit: 1 });
-
+  // console.log(charges);
   const charge = charges.data.find((c) => {
-    return c.amount === price;
+    return c.amount === price * 100;
   });
 
   expect(charge).toBeDefined();
