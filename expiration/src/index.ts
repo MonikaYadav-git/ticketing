@@ -2,6 +2,7 @@ import { OrderCreatedListener } from './events/listener/order-created-listener';
 import { natsWrapper } from './nats-wrapper';
 
 const start = async () => {
+  console.log('starting in 3 2 1...');
   if (!process.env.NATS_CLIENT_ID)
     throw new Error('NATS Client must be defined!!');
   if (!process.env.NATS_URL) throw new Error('NATS URL must be defined!!');
